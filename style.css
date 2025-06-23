@@ -32,6 +32,7 @@ a:visited {
 html,
 body,
 div,
+p,
 span,
 object,
 h1,
@@ -129,7 +130,7 @@ h1 {
   border-radius: 9999999px;
   opacity: 1;
   background-color: #060318;
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), z;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .menu-button > *:nth-child(2) {
   width: 74%;
@@ -158,12 +159,12 @@ body[data-category-mobile-menu-open] .menu-button span:nth-child(3) {
   color: #060318;
   aspect-ratio: 210 / 59;
 }
-.mobile-category-container {
+.mobile-category-container, .desktop-category-containe{
   --site-nav-main-gap: 32px;
   white-space: nowrap;
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-body[data-category-mobile-menu-open] .mobile-category-container {
+body[data-category-mobile-menu-open] .mobile-category-container, .desktop-category-containe {
   visibility: visible;
   opacity: 1;
 }
@@ -363,8 +364,7 @@ a img {
   box-sizing: border-box;
   align-items: center;
   justify-content: center;
-  gap: clamp(16px, 5vw, 100px);
-  gap: 16px;
+      gap: clamp(16px, 5vw, 100px);
   padding: 24px 16px;
   text-align: center;
 }
@@ -402,7 +402,6 @@ a img {
   --pill-padding: 15px;
   --pill-font-weight: 600;
   --pill-font-size: 13px;
-  /* margin-top: 26px; */
 }
 .checkable-pills {
   display: flex;
@@ -735,7 +734,7 @@ input[type="checkbox"] {
 .filter-categories .category {
   display: inline-block;
 }
-.filter-categories .category a {
+.filter-categories .category p {
   display: inline-flex;
   align-items: center;
   height: 36px;
@@ -746,7 +745,7 @@ input[type="checkbox"] {
   font-weight: 600;
   line-height: 20px;
 }
-.filter-categories .active > a {
+.filter-categories .active > p {
   background: #f8f7f4;
 }
 .filter-categories-scroller::after {
@@ -1023,17 +1022,28 @@ span.badge {
   align-items: center;
   margin-left: 8px;
 }
-.content-statitic .icon {
+.content-statitic .like-button {
   width: 16px;
   height: 16px;
   margin-right: 4px;
   transition: color 200ms ease;
-  color: #9e9ea7;
   fill: currentColor;
 }
-.likes-count {
+.likes-count, .view-count{
   color: #3d3d4e;
   font-weight: 500;
+}
+.liked{
+    color: #ea64d9;
+  }
+  .like-button:hover{
+    color: #ea64d9;
+    cursor: pointer;
+}
+.checkable-pills label :hover, .category:hover, .key:hover{
+  cursor: pointer;
+  background-color:  #f8f7f4;
+  border-radius: 999999px;
 }
 .content-video {
   position: absolute;
@@ -1139,15 +1149,21 @@ span.badge {
   list-style: none;
   row-gap: 4px;
 }
-.site-footer-lower-items-link a{
+.site-footer-lower-items-link a {
   color: #6e6d7a;
 }
-.filter-button-container-flex{
+.filter-button-container-flex {
   display: flex;
-    -ms-flex: 0 0 200px;
-    flex: 0 0 200px;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+  -ms-flex: 0 0 200px;
+  flex: 0 0 200px;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.Animation, .Branding, .Mobile, .Print, .Product-design, .Typography, .Web-design{
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition-property: opacity;
+  display: none;
+  overflow: hidden;
 }

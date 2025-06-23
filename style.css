@@ -159,12 +159,14 @@ body[data-category-mobile-menu-open] .menu-button span:nth-child(3) {
   color: #060318;
   aspect-ratio: 210 / 59;
 }
-.mobile-category-container, .desktop-category-containe{
+.mobile-category-container,
+.desktop-category-containe {
   --site-nav-main-gap: 32px;
   white-space: nowrap;
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-body[data-category-mobile-menu-open] .mobile-category-container, .desktop-category-containe {
+body[data-category-mobile-menu-open] .mobile-category-container,
+.desktop-category-containe {
   visibility: visible;
   opacity: 1;
 }
@@ -364,7 +366,7 @@ a img {
   box-sizing: border-box;
   align-items: center;
   justify-content: center;
-      gap: clamp(16px, 5vw, 100px);
+  gap: clamp(16px, 5vw, 100px);
   padding: 24px 16px;
   text-align: center;
 }
@@ -1029,20 +1031,23 @@ span.badge {
   transition: color 200ms ease;
   fill: currentColor;
 }
-.likes-count, .view-count{
+.likes-count,
+.view-count {
   color: #3d3d4e;
   font-weight: 500;
 }
-.liked{
-    color: #ea64d9;
-  }
-  .like-button:hover{
-    color: #ea64d9;
-    cursor: pointer;
+.liked {
+  color: #ea64d9;
 }
-.checkable-pills label :hover, .category:hover, .key:hover{
+.like-button:hover {
+  color: #ea64d9;
   cursor: pointer;
-  background-color:  #f8f7f4;
+}
+.checkable-pills label :hover,
+.category:hover,
+.key:hover {
+  cursor: pointer;
+  background-color: #f8f7f4;
   border-radius: 999999px;
 }
 .content-video {
@@ -1161,7 +1166,13 @@ span.badge {
   -ms-flex-pack: end;
   justify-content: flex-end;
 }
-.Animation, .Branding, .Mobile, .Print, .Product-design, .Typography, .Web-design{
+.Animation,
+.Branding,
+.Mobile,
+.Print,
+.Product-design,
+.Typography,
+.Web-design {
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   transition-property: opacity;
   display: none;

@@ -104,7 +104,7 @@ likeButtons.forEach((el) => {
   el.addEventListener("click", () => {
     const count = el.parentElement.querySelector(".likes-count");
     let current = +count.textContent;
-     if (el.classList.contains("liked")) {
+    if (el.classList.contains("liked")) {
       el.classList.remove("liked");
       count.textContent = current - 1;
     } else {
